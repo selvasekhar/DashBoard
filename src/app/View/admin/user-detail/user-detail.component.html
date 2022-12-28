@@ -1,0 +1,515 @@
+<div class="container-fluid  pt-5">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="bread ">
+                <div>
+                    <span><a routerLink="/view/admin">Admin</a> </span>
+                    <i class="fa fa-caret-right ml-2" aria-hidden="true"></i><a routerLink="/view/admin/user"> User</a>
+                    <i class="fa fa-caret-right ml-2" aria-hidden="true"></i><b> Detail</b>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12 mt-1">
+            <div class="card">
+                <div class="card-body">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="ml-auto text-right">
+                                    <div class="btnn-group" role="group" aria-label="Basic example">
+                                        <button type="button" class="btn"><i class="fa fa-floppy-o"
+                                                aria-hidden="true"></i><span>Save</span> </button>
+                                        <button type="button" class="btn"><i class="fa fa-refresh"
+                                                aria-hidden="true"></i><span>Refresh</span> </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="">Login ID</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="">Password</label>
+                                    <div class="input-group">
+                                        <input type="password" class="form-control">
+                                        <div class="input-group-append">
+                                            <button>Reset</button>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="">Contact No</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="">Email ID</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="">First Name</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="">Middle Name</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="">Last Name</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="">Status</label>
+                                    <select class="form-control">
+                                        <option value="">--Select--</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="">Begin Date</label>
+
+                                    <div class="input-group">
+                                        <input class="form-control" placeholder="dd-mm-yyyy"
+                                            [startDate]="{year: 1789, month: 1}" (click)="d1.toggle()" name="dp"
+                                            ngbDatepicker #d1="ngbDatepicker">
+                                        <div class="input-group-append">
+                                            <button class="datebtn" (click)="d1.toggle()" type="button">
+                                                <i class="fa fa-calendar"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="">End Date</label>
+                                    <div class="input-group">
+                                        <input class="form-control" placeholder="dd-mm-yyyy" (click)="d2.toggle()"
+                                            name="dp" ngbDatepicker #d2="ngbDatepicker">
+                                        <div class="input-group-append">
+                                            <button class="datebtn" (click)="d2.toggle()" type="button">
+                                                <i class="fa fa-calendar"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="">Designation</label>
+                                    <select class="form-control">
+                                        <option value="">--Select--</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="">Gender</label>
+                                    <select class="form-control">
+                                        <option value="">--Select--</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="">Location</label>
+                                    <select class="form-control">
+                                        <option value="">--Select--</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="">Branch</label>
+                                    <select class="form-control">
+                                        <option value="">--Select--</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="">Department</label>
+                                    <select class="form-control">
+                                        <option value="">--Select--</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="">Team</label>
+                                    <select class="form-control">
+                                        <option value="">--Select--</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="">Supervisor</label>
+                                    <select class="form-control">
+                                        <option value="">--Select--</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="">Entered By</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="">User Signature</label>
+                                    <input type="file" class="form-control-file" id="exampleFormControlFile1"
+                                        accept='image/*' (change)="preview(file.files)" #file>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="card sigCard">
+                                    <img class="img-responsive sigImg" [src]="imgURL" *ngIf="imgURL" />
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-md-12 mt-1">
+            <div class="card">
+                <!-- <div class="card-header">
+                    Additional Info
+                </div> -->
+                <div class="card-body p-0">
+                    <form>
+                        <div class="container-fluid">
+                            <div class="row verticaltab">
+                                <div class="col-md-2 pt28 px-0">
+                                    <div class="tab nopadding">
+                                        <ul class="nav nav-tabs">
+                                            <li class="nav-item">
+                                                <a data-toggle="tab" class="nav-link active" href="#group">Group
+                                                    Details</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a data-toggle="tab" class="nav-link" href="#role">Role Details</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a data-toggle="tab" class="nav-link" href="#user">User Team Link
+                                                    details</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-md-10 px-0">
+                                    <div class="wizcontent1">
+                                        <div class="tab-content">
+                                            <div id="group" class="tab-pane active">
+                                                <div class="f-narrow ">
+                                                    <div class="col-md-12 ml-auto pl-1 mb-1 pr-0 text-right">
+                                                        <div class="btnn-group" role="group" aria-label="Basic example">
+                                                            <button type="button" class="btn "
+                                                            (click)="open(content)"><i
+                                                                    class="fa fa-plus"></i><span>New</span> </button>
+                                                            <button type="button" class="btn "
+                                                                (click)="openSearchPanel()"><i
+                                                                    class="fa fa-folder-open-o"
+                                                                    aria-hidden="true"></i><span>Open</span> </button>
+                                                            <button type="button" class="btn "><i class="fa fa-trash"
+                                                                    aria-hidden="true"></i><span>Delete</span> </button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12 pl-0  pr-0">
+                                                        <div class="card">
+                                                            <div class="table-responsive">
+                                                                <table class="table table-sm table-hover">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th>Group Name</th>
+                                                                            <th>Begin Date</th>
+                                                                            <th>End Date</th>
+                                                                            <th>Status</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>Value</td>
+                                                                            <td>Value</td>
+                                                                            <td>Value</td>
+                                                                            <td>Value</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>Value</td>
+                                                                            <td>Value</td>
+                                                                            <td>Value</td>
+                                                                            <td>Value</td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div id="role" class="tab-pane">
+                                                <div class="col-md-12 mt-1 pt28 pl-1 pr-0 ">
+                                                    <div class="card">
+                                                        <div class="table-responsive">
+                                                            <table class="table table-sm table-hover">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th>Role Name</th>
+                                                                        <th>Module Name</th>
+                                                                        <th>Begin Date</th>
+                                                                        <th>End Date</th>
+                                                                        <th>Status</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>Value</td>
+                                                                        <td>Value</td>
+                                                                        <td>Value</td>
+                                                                        <td>Value</td>
+                                                                        <td>Value</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Value</td>
+                                                                        <td>Value</td>
+                                                                        <td>Value</td>
+                                                                        <td>Value</td>
+                                                                        <td>Value</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div id="user" class="tab-pane">
+                                                <div class="f-narrow ">
+                                                    <div class="col-md-12 pl-1 pr-0 ml-auto mb-1 text-right">
+
+                                                        <div class="btnn-group" role="group" aria-label="Basic example">
+                                                            <button type="button" class="btn"
+                                                            (click)="open(content1)"><i
+                                                                    class="fa fa-plus"></i><span>New</span> </button>
+                                                            <button type="button" class="btn "
+                                                                (click)="openSearchPanel()"><i
+                                                                    class="fa fa-folder-open-o"
+                                                                    aria-hidden="true"></i><span>Open</span> </button>
+                                                            <button type="button" class="btn"><i class="fa fa-trash"
+                                                                    aria-hidden="true"></i><span>Delete</span> </button>
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="col-md-12 pl-1 pr-0 mt-1 ">
+                                                        <div class="card">
+                                                            <div class="table-responsive">
+                                                                <table class="table table-sm table-hover">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th>Company</th>
+                                                                            <th>Company Branch </th>
+                                                                            <th>Location</th>
+                                                                            <th>Branch</th>
+                                                                            <th>Team</th>
+                                                                            <th>Status</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>Value</td>
+                                                                            <td>Value</td>
+                                                                            <td>Value</td>
+                                                                            <td>Value</td>
+                                                                            <td>Value</td>
+                                                                            <td>Value</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>Value</td>
+                                                                            <td>Value</td>
+                                                                            <td>Value</td>
+                                                                            <td>Value</td>
+                                                                            <td>Value</td>
+                                                                            <td>Value</td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<ng-template #content let-modal>
+        <div class="modal-header">
+            <h4 class="modal-title" id="modal-basic-title">User Group</h4>
+            <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        </div>
+        <div class="modal-body">
+            <form>
+                <div class="col-md-12 ">
+                    <div class="form-group">
+                        <label >Group </label>
+                  
+                            <select class="form-control">
+                  <option value="">--Select--</option>
+                </select>
+                    
+                    </div>
+                    <div class="form-group ">
+                        <label >Begin Date </label>
+                       
+                            <div class="input-group">
+                                <input class="form-control" placeholder="yyyy-mm-dd" name="dp" (click)="d5.toggle()" ngbDatepicker #d5="ngbDatepicker">
+                                <div class="input-group-append">
+                                    <button class="datebtn input-group-text" (click)="d5.toggle()" type="button">
+                      <i class="fa fa-calendar text-danger"></i>
+                    </button>
+                               
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group ">
+                        <label>End Date </label>
+                     
+                            <div class="input-group">
+                                <input class="form-control" placeholder="yyyy-mm-dd" name="dp" (click)="d6.toggle()" ngbDatepicker #d6="ngbDatepicker">
+                                <div class="input-group-append">
+                                    <button class="datebtn input-group-text" (click)="d6.toggle()" type="button">
+                      <i class="fa fa-calendar text-danger"></i>
+                    </button>
+                             
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group ">
+                        <label>Status :</label>
+                     
+                            <select class="form-control">
+                  <option value="">--Select--</option>
+                </select>
+                    </div>
+                </div>          
+            </form>
+        </div>
+        <div class="modal-footer">
+            <button class="btn">
+              <i class="fa fa-save"></i><span> Save</span> 
+          </button>
+            <button class="btn">
+              <i class="fa fa-refresh"></i><span> Refresh</span> 
+          </button>
+            <button class="btn">
+              <i class="fa fa-eraser"></i><span> Clear</span> 
+          </button>
+        </div>
+    </ng-template>
+    <ng-template #content1 let-modal>
+        <div class="modal-header">
+            <h4 class="modal-title" id="modal-basic-title">User Team Link</h4>
+            <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        </div>
+        <div class="modal-body">
+            <form>
+                <div class="col-md-12 ">
+                    <div class="form-group ">
+                        <label >Facility :</label>
+                     
+                            <select class="form-control">
+                      <option value="">--Select--</option>
+                    </select>
+                    
+                    </div>
+                    <div class="form-group ">
+                        <label>Team :</label>
+                      
+                            <select class="form-control">
+                        <option value="">--Select--</option>
+                      </select>
+                    </div>
+                    <div class="form-group ">
+                        <label>Begin Date :</label>
+                  
+                            <div class="input-group">
+                                <input class="form-control" placeholder="yyyy-mm-dd" name="dp" (click)="d5.toggle()" ngbDatepicker #d5="ngbDatepicker">
+                                <div class="input-group-append">
+                                    <button class="datebtn input-group-text" (click)="d5.toggle()" type="button">
+                          <i class="fa fa-calendar text-danger"></i>
+                        </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group ">
+                        <label>End Date :</label>
+                 
+                            <div class="input-group">
+                                <input class="form-control" placeholder="yyyy-mm-dd" name="dp" (click)="d6.toggle()" ngbDatepicker #d6="ngbDatepicker">
+                                <div class="input-group-append">
+                                    <button class="datebtn input-group-text" (click)="d6.toggle()" type="button">
+                          <i class="fa fa-calendar text-danger"></i>
+                        </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group ">
+                        <label>Status :</label>
+                  
+                            <select class="form-control">
+                      <option value="">--Select--</option>
+                    </select>
+                    </div>
+                </div>
+    
+    
+            </form>
+        </div>
+        <div class="modal-footer">
+            <button class="btn">
+              <i class="fa fa-save"></i><span> Save</span> 
+          </button>
+            <button class="btn ">
+              <i class="fa fa-refresh"></i><span> Refresh</span> 
+          </button>
+            <button class="btn">
+              <i class="fa fa-eraser"></i><span> Clear</span>  
+          </button>
+        </div>
+    </ng-template>

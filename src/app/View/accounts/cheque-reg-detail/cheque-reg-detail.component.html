@@ -1,0 +1,172 @@
+<div class="container-fluid  pt-5">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="bread ">
+                <div>
+                    <span><a routerLink="/view/Account">Account </a> </span>
+                    <i class="fa fa-caret-right ml-2" aria-hidden="true"></i><a routerLink="/view/account/TaxSearch">
+                        Cheque Register </a>
+                    <i class="fa fa-caret-right ml-2" aria-hidden="true"></i><b> Detail</b>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12 mt-1">
+            <div class="card">
+                <div class="card-body">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="">Registration No</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="">Register Name</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="">Status</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="">Ledger</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="">Effective Date</label>
+                                    <div class="input-group">
+                                        <input class="form-control" placeholder="dd-mm-yyyy" (click)="d1.toggle()"
+                                            name="dp" ngbDatepicker #d1="ngbDatepicker">
+                                        <div class="input-group-append">
+                                            <button class="datebtn" (click)="d1.toggle()" type="button">
+                                                <i class="fa fa-calendar"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="">Branch</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12 mt-1">
+            <div class="card">
+                <div class="card-body p-0">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p class="heading">Additional Detail</p>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="">Voucher By</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="">Transaction Date From</label>
+                                    <div class="input-group">
+                                        <input class="form-control" placeholder="dd-mm-yyyy" (click)="d2.toggle()"
+                                            name="dp" ngbDatepicker #d2="ngbDatepicker">
+                                        <div class="input-group-append">
+                                            <button class="datebtn" (click)="d2.toggle()" type="button">
+                                                <i class="fa fa-calendar"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="">Transaction Date To</label>
+                                    <div class="input-group">
+                                        <input class="form-control" placeholder="dd-mm-yyyy" (click)="d3.toggle()"
+                                            name="dp" ngbDatepicker #d3="ngbDatepicker">
+                                        <div class="input-group-append">
+                                            <button class="datebtn" (click)="d3.toggle()" type="button">
+                                                <i class="fa fa-calendar"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="">Entry Date From</label>
+                                    <div class="input-group">
+                                        <input class="form-control" placeholder="dd-mm-yyyy" (click)="d4.toggle()"
+                                            name="dp" ngbDatepicker #d4="ngbDatepicker">
+                                        <div class="input-group-append">
+                                            <button class="datebtn" (click)="d4.toggle()" type="button">
+                                                <i class="fa fa-calendar"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="">Entry Date To</label>
+                                    <div class="input-group">
+                                        <input class="form-control" placeholder="dd-mm-yyyy" (click)="d5.toggle()"
+                                            name="dp" ngbDatepicker #d5="ngbDatepicker">
+                                        <div class="input-group-append">
+                                            <button class="datebtn" (click)="d5.toggle()" type="button">
+                                                <i class="fa fa-calendar"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12 pb-1">
+                                <div class="card">
+                                    <div class="table-responsive">
+                                        <table class="table table-sm table-hover">
+                                            <thead>
+                                                <tr>
+                                                    <th>Voucher Type</th>
+                                                    <th>Voucher Ref No</th>
+                                                    <th>Transaction Date</th>
+                                                    <th>In Value</th>
+                                                    <th>Out Value</th>
+                                                    <th>Entry Date</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Value</td>
+                                                    <td>Value</td>
+                                                    <td>Value</td>
+                                                    <td>Value</td>
+                                                    <td>Value</td>
+                                                    <td>Value</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

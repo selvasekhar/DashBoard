@@ -1,0 +1,172 @@
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-7 col-sm-7 col-xs-7 p77">
+                <div class="loginForm" *ngIf="fourthdiv">
+                    <div class=" formgroup1 d-flex" (click)="log()" [ngClass]="login ? 'active' : ''">
+                        <div class="login button">LOGIN</div>
+                        <div class="backCircle">
+                            <div class="loginCircle">
+                                <i class="fa fa-user loginIcon" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" formgroup2 d-flex" (click)="reg()" [ngClass]="register ? 'active' : ''">
+                        <div class="registration button">REGISTER</div>
+                        <div class="backCircle">
+                            <div class="loginCircle">
+                                <i class="fa fa-user-plus loginIcon" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-5 col-sm-5 col-xs-5 initial" *ngIf="firstdiv">
+                <div class="initial2 login_box">
+                    <div *ngIf="loginForm" >                     
+                        <div class="loginHeading">LOGIN</div>
+                        <div class="form-group mt-1">
+                            <label>User Name</label>
+                            <label class="float-right text-danger">mandatory</label>
+                            <input type="text" class="form-control mandatory" placeholder="User Name">
+                        </div>
+                        <div class="form-group mt-1">
+                            <label for="">Password</label>
+                            <div class="input-group mandatory">
+                                <input [type]="isActive ? 'password' : 'text'" class="form-control "
+                                    [ngClass]="errorOccure ? 'error' : ''" aria-label=""
+                                    aria-describedby="basic-addon1">
+                                <div class="input-group-append">
+                                    <button class="btn" type="button" (click)="eye()"><i
+                                            [ngClass]="isActive ? 'fa-eye-slash' : 'fa-eye'" class="faa  labelPrimary"
+                                            aria-hidden="true"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <button (click)="home()" class="btn btnprimary mt-4">Login</button>
+                    </div>
+                    <div *ngIf="companyForm">
+                        <div class="loginHeading">Company Detail</div>
+                        <div class="form-group mt-1">
+                            <label>Company</label>
+                            <input type="text" class="form-control" placeholder="copra">
+                        </div>
+                        <div class="form-group mt-1">
+                            <label>Branch</label>
+                            <select class="form-control">
+                                <option value="">--Select--</option>
+                            </select>
+                        </div>
+                        <button type="submit" [routerLink]="['/adminMenu']" class="btn btnprimary mt-4">Submit</button>
+                    </div>
+                    
+                    <div *ngIf="resetPassword">
+                        <div class="loginHeading">Reset Password</div>
+                        <div class="form-group mt-1">
+                            <label>New Password</label>
+                            <div>
+                                <input id="password-field" type="password" class="form-control" name="password" placeholder="Min 8 Characters">
+                                <span toggle="#password-field" class="faa fa-fw fa-eye field-icon toggle-password"></span>
+                            </div>
+                        </div>
+                        <div class="form-group mt-1">
+                            <label>Confirm Password</label>
+                            <div>
+                                <input id="password-field" type="password" class="form-control" name="password" placeholder="Enter Password">
+                                <span toggle="#password-field" class="faa fa-fw fa-eye field-icon toggle-password"></span>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btnprimary mt-4">Submit</button>
+                    </div>
+                    <div class="form-group">
+                        <div class="container-fluid">
+                            <div class="row mt-3 pt-2">
+                                <div class="col-md-6 pl-0">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                        <label class="custom-control-label" for="customCheck1">Remember Password</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 text-right" style="margin-top: 0px">
+                                    <a (click)="password()">
+                                        <label class="control-label  cursor"> Forgot Password</label>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-5 col-sm-5 col-xs-5 initial2" *ngIf="seconddiv">
+                <div class="initial2 reg_box">
+                    <div class="regheading">REGISTRATION</div>
+                    <div>
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-md-6 dotBorder">
+                                    <div class="container-fluid mt-2">
+                                        <div class="row">
+                                            <div class="col-md-12 form-group">
+                                                <div class="col-md-12 form-group header">
+                                                    <h6>User Details</h6>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12 form-group">
+                                                <label>Email ID</label>
+                                                <input type="text" class="form-control" placeholder="shore@gmail.com">
+                                            </div>
+                                            <div class="col-md-12 form-group">
+                                                <label>User Name</label>
+                                                <input type="text" class="form-control">
+                                            </div>
+                                            <div class="col-md-12 form-group">
+                                                <label>Phone Number</label>
+                                                <input type="password" class="form-control" placeholder="+(91)-99444 55533">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 dotBorderbottom">
+                                    <div class="container-fluid mt-2 ">
+                                        <div class="row">
+                                            <div class="col-md-12 form-group">
+                                                <div class="col-md-12 form-group header">
+                                                    <h6>Company Details</h6>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12 form-group">
+                                                <label>Company Name</label>
+                                                <input type="password" class="form-control">
+                                            </div>
+                                            <div class="col-md-12 form-group">
+                                                <label>Company Mail ID</label>
+                                                <input type="text" class="form-control" placeholder="company@email.com">
+                                            </div>
+                                            <div class="col-md-12 form-group">
+                                                <label>Address Line 1</label>
+                                                <input type="text" class="form-control">
+                                            </div>
+                                            <div class="col-md-12 form-group">
+                                                <label>Address Line 2</label>
+                                                <input type="password" class="form-control">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="terms mb-3 "> By clicking on submit, you will get an email from admin within two working days.
+                                </div>
+
+                                <div class="col-md-12 form-group">
+                                    <button type="submit" class="btn btnprimary  redirect" (click)="home()">Submit</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>

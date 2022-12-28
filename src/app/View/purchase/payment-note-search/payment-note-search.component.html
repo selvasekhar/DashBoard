@@ -1,0 +1,163 @@
+<div class="container-fluid  pt-5">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="bread ">
+                <div>
+                    <span>Purchase</span>
+                    <i class="fa fa-caret-right ml-2" aria-hidden="true"></i> Payment Note
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-12 mt-1 mb-3 d-flex">
+            <h6 class="mb-0"> Payment Note Search</h6>
+            <div class="ml-auto text-right">
+                <div class="btnn-group">
+                    <button type="button" class="btn" routerLink="/view/purchase/PaymentNoteDetail"><i
+                            class="fa fa-plus"></i><span>New</span> </button>
+                    <button type="button" class="btn" (click)="openSearchPanel()"><i
+                            class="fa fa-search"></i><span>Search</span> </button>
+                    <button type="button" class="btn"><i class="fa fa-eraser"></i><span>Clear</span> </button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12" [ngClass]="searchPanel ? 'show':'hide'">
+            <div class="card py-3">
+                <div class="close-btn" (click)="closeSearchPanel()"><i class="fa fa-times-circle"
+                        aria-hidden="true"></i></div>
+                <form>
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="">Payment Note Ref No</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="">Vendor</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="">Branch</label>
+                                    <select class="form-control">
+                                        <option value="">--Select--</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="">Purchase invoice No</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="">Paid Date From</label>
+                                    <div class="input-group">
+                                        <input class="form-control" placeholder="dd-mm-yyyy" (click)="d1.toggle()"
+                                            name="dp" ngbDatepicker #d1="ngbDatepicker">
+                                        <div class="input-group-append">
+                                            <button class="datebtn" (click)="d1.toggle()" type="button">
+                                                <i class="fa fa-calendar"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="">Paid Date To</label>
+                                    <div class="input-group">
+                                        <input class="form-control" placeholder="dd-mm-yyyy" (click)="d2.toggle()"
+                                            name="dp" ngbDatepicker #d2="ngbDatepicker">
+                                        <div class="input-group-append">
+                                            <button class="datebtn" (click)="d2.toggle()" type="button">
+                                                <i class="fa fa-calendar"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="">Payment Mode</label>
+                                    <select class="form-control">
+                                        <option value="">--Select--</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="">Total Amount From</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="">Total Amount To</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="">Status</label>
+                                    <select class="form-control">
+                                        <option value="">--Select--</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="col-md-12 mt-1  d-flex">
+            <p class="s-text ">Showing 1 - 10 of 14 results</p>
+            <div class="ml-auto text-right">
+                <ngb-pagination [collectionSize]="50" [(page)]="currentPage" size="sm" [boundaryLinks]="true">
+                </ngb-pagination>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="card">
+                <div class="table-responsive panelh">
+                    <table class="table table-sm table-hover">
+                        <thead class="thead-light">
+                            <tr>
+                                <th>Payment Note Ref No</th>
+                                <th>Purchase invoice No</th>
+                                <th>Vendor Name</th>
+                                <th>Payment Mode</th>
+                                <th>Total Amount($)</th>
+                                <th>Paid Amount($)</th>
+                                <th>Balance Amount($)</th>
+                                <th>Paid By</th>
+                                <th>Paid Date</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

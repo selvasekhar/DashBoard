@@ -1,0 +1,810 @@
+<div class="container-fluid  pt-5">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="bread ">
+                <div>
+                    <span><a routerLink="/view/admin">Purchase </a> </span>
+                    <i class="fa fa-caret-right ml-2" aria-hidden="true"></i><a routerLink="/view/admin/user">
+                        Purchase Invoice</a>
+                    <i class="fa fa-caret-right ml-2" aria-hidden="true"></i><b> Detail</b>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12 mt-1">
+            <div class="card readOnly">
+                <div class="card-body">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-2x">
+                                <div class="form-group">
+                                    <label for="">Vendor Name</label>
+                                    <div><b>Value</b></div>
+                                </div>
+                            </div>
+                            <div class="col-md-2x">
+                                <div class="form-group">
+                                    <label for="">Net Amount ($)</label>
+                                    <div><b>Value</b></div>
+                                </div>
+                            </div>
+                            <div class="col-md-2x">
+                                <div class="form-group">
+                                    <label for="">Purchase Invoice Date</label>
+                                    <div><b>Value</b></div>
+                                </div>
+                            </div>
+                            <div class="col-md-2x">
+                                <div class="form-group">
+                                    <label for="">Purchase Invoice Status</label>
+                                    <div><b>Value</b></div>
+                                </div>
+                            </div>
+                            <div class="col-md-2x">
+                                <div class="form-group">
+                                    <label for="">Purchase Invoice No</label>
+                                    <div><b>Value</b></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12 mt-1">
+            <div class="card">
+                <div class="card-body p-0">
+                    <form>
+                        <div class="container-fluid">
+                            <div class="row verticaltab">
+                                <div class="col-md-2 readOnly pt28 px-0">
+                                    <div class="tab nopadding">
+                                        <ul class="nav nav-tabs">
+                                            <li class="nav-item">
+                                                <a data-toggle="tab" class="nav-link active" href="#Detail">Detail
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a data-toggle="tab" class="nav-link" href="#Items">Items
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a data-toggle="tab" class="nav-link" href="#Notes">Notes</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a data-toggle="tab" class="nav-link"
+                                                    href="#Attachments">Attachments</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a data-toggle="tab" class="nav-link" href="#Status">Status History</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a data-toggle="tab" class="nav-link" href="#Invoice">Purchase
+                                                    Invoice</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-md-10 px-0">
+                                    <div class="wizcontent1">
+                                        <div class="tab-content">
+                                            <div id="Detail" class="tab-pane active">
+                                                <div class="f-narrow ">
+                                                    <div
+                                                        class="col-md-12 ml-auto border-bottom pl-1 mb-1 pr-0 text-right">
+                                                        <div class="btnn-group mb-1" role="group"
+                                                            aria-label="Basic example">
+
+                                                            <button type="button" class="btn "><i
+                                                                    class="fa fa-save"></i><span>Save</span> </button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12 pl-0 border-bottom  pr-0">
+                                                        <div class="container-fluid">
+                                                            <div class="row">
+                                                                <div class="col-md-4 px-1 ">
+                                                                    <div class="container-fluid">
+                                                                        <div class="row">
+                                                                            <div class="col-md-12">
+                                                                                <div class="form-group">
+                                                                                    <label for="">Vendor
+                                                                                        Name</label>
+                                                                                    <div class="input-group">
+                                                                                        <input type="text"
+                                                                                            class="form-control">
+                                                                                        <div class="input-group-append">
+                                                                                            <button class="datebtn" (click)="open2(content2)"
+                                                                                                type="button">
+                                                                                                <i
+                                                                                                    class="fa fa-search"></i>
+                                                                                            </button>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-md-12">
+                                                                                <div class="form-group">
+                                                                                    <label for="">Vendor
+                                                                                        No</label>
+                                                                                    <div class="input-group">
+                                                                                        <input type="text"
+                                                                                            class="form-control">
+                                                                                        <div class="input-group-append">
+                                                                                            <button class="datebtn"
+                                                                                                type="button">
+                                                                                                <i
+                                                                                                    class="fa fa-search"></i>
+                                                                                            </button>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-md-12">
+                                                                                <div class="form-group">
+                                                                                    <label for="">Vendor Contact
+                                                                                        No</label>
+                                                                                    <div class="readOnly"><b>Value</b>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-md-12">
+                                                                                <div class="form-group">
+                                                                                    <label for="">Vendor Address</label>
+                                                                                    <select class="form-control">
+                                                                                        <option value="">--Select--
+                                                                                        </option>
+                                                                                    </select>
+                                                                                </div>
+                                                                                <textarea
+                                                                                    class="form-control"></textarea>
+                                                                            </div>
+
+
+
+                                                                            <div class="col-md-12">
+                                                                                <div class="form-group">
+                                                                                    <label for="">Vendor Ledger Code
+                                                                                    </label>
+                                                                                    <div class="readOnly"><b>Value</b>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-md-12">
+                                                                                <div class="form-group">
+                                                                                    <label for="">Company Ledger
+                                                                                        Code</label>
+                                                                                    <div class="readOnly"><b>Value</b>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <div class="col-md-12 ml-auto text-right">
+                                                                                <div class="btnn-group" role="group"
+                                                                                    aria-label="Basic example">
+                                                                                    <button type="button"
+                                                                                        class="btn my-1"><i
+                                                                                            class="fa fa-retweet"
+                                                                                            aria-hidden="true"></i><span>Change</span>
+                                                                                    </button>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-4 px-1 border-right">
+                                                                    <div class="container-fluid">
+                                                                        <div class="row">
+                                                                            <div class="col-md-12">
+                                                                                <div class="form-group">
+                                                                                    <label for="">Invoice Date</label>
+                                                                                    <div class="input-group">
+                                                                                        <input class="form-control"
+                                                                                            placeholder="dd-mm-yyyy"
+                                                                                            (click)="d1.toggle()"
+                                                                                            name="dp" ngbDatepicker
+                                                                                            #d1="ngbDatepicker">
+                                                                                        <div class="input-group-append">
+                                                                                            <button class="datebtn"
+                                                                                                (click)="d1.toggle()"
+                                                                                                type="button">
+                                                                                                <i
+                                                                                                    class="fa fa-calendar"></i>
+                                                                                            </button>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-md-12">
+                                                                                <div class="form-group">
+                                                                                    <label for="">Effective Date</label>
+                                                                                    <div class="input-group">
+                                                                                        <input class="form-control"
+                                                                                            placeholder="dd-mm-yyyy"
+                                                                                            (click)="d2.toggle()"
+                                                                                            name="dp" ngbDatepicker
+                                                                                            #d2="ngbDatepicker">
+                                                                                        <div class="input-group-append">
+                                                                                            <button class="datebtn"
+                                                                                                (click)="d2.toggle()"
+                                                                                                type="button">
+                                                                                                <i
+                                                                                                    class="fa fa-calendar"></i>
+                                                                                            </button>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-md-12">
+                                                                                <div class="form-group">
+                                                                                    <label for="">Due Date</label>
+                                                                                    <div class="input-group">
+                                                                                        <input class="form-control"
+                                                                                            placeholder="dd-mm-yyyy"
+                                                                                            (click)="d3.toggle()"
+                                                                                            name="dp" ngbDatepicker
+                                                                                            #d3="ngbDatepicker">
+                                                                                        <div class="input-group-append">
+                                                                                            <button class="datebtn"
+                                                                                                (click)="d3.toggle()"
+                                                                                                type="button">
+                                                                                                <i
+                                                                                                    class="fa fa-calendar"></i>
+                                                                                            </button>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-md-12">
+                                                                                <div class="form-group">
+                                                                                    <label for="">Shipper</label>
+                                                                                    <select class="form-control">
+                                                                                        <option value="">--Select--
+                                                                                        </option>
+                                                                                    </select>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-4 px-1 border-right">
+                                                                    <div class="container-fluid">
+                                                                        <div class="row">
+
+                                                                            <div class="col-md-12">
+                                                                                <div class="form-group">
+                                                                                    <label for="">Comments</label>
+                                                                                    <textarea
+                                                                                        class="form-control"></textarea>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-md-12">
+                                                                                <div class="ml-auto text-right pb-1">
+                                                                                    <div class="btnn-group py-3"
+                                                                                        role="group"
+                                                                                        aria-label="Basic example">
+                                                                                        <button type="button"
+                                                                                            class="btn"><i
+                                                                                                class="fa fa-check-square"
+                                                                                                aria-hidden="true"></i><span>Submit</span>
+                                                                                        </button>
+                                                                                        <button type="button"
+                                                                                            class="btn"><i
+                                                                                                class="fa fa-thumbs-up"
+                                                                                                aria-hidden="true"></i><span>Approve</span>
+                                                                                        </button>
+                                                                                        <button type="button"
+                                                                                            class="btn"><i
+                                                                                                class="fa fa-thumbs-down"
+                                                                                                aria-hidden="true"></i><span>Reject</span>
+                                                                                        </button>
+                                                                                        <button type="button"
+                                                                                            class="btn"><i
+                                                                                                class="fa fa-credit-card"
+                                                                                                aria-hidden="true"></i><span>Payment
+                                                                                                Note</span>
+                                                                                        </button>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12 px-0 mt-1">
+                                                        <div class="card readOnly">
+                                                            <div class="card-body">
+                                                                <div class="container-fluid">
+                                                                    <div class="row">
+                                                                        <div class="col-md-3">
+                                                                            <div class="form-group">
+                                                                                <label for="">Entered By</label>
+                                                                                <div><b>Value</b></div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-md-3">
+                                                                            <div class="form-group">
+                                                                                <label for="">Entered Date</label>
+                                                                                <div><b>Value</b></div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-md-3">
+                                                                            <div class="form-group">
+                                                                                <label for="">Approved By</label>
+                                                                                <div><b>Value</b></div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-md-3">
+                                                                            <div class="form-group">
+                                                                                <label for="">Approved Date</label>
+                                                                                <div><b>Value</b></div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div id="Items" class="tab-pane">
+                                                <div class="container-fluid">
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <div class="f-narrow ">
+                                                                <div
+                                                                    class="col-md-12 ml-auto pl-1 mb-1 pr-0 text-right">
+                                                                    <div class="btnn-group" role="group"
+                                                                        aria-label="Basic example">
+                                                                        <button type="button" class="btn "
+                                                                            (click)="open(content)"><i
+                                                                                class="fa fa-plus"></i><span>New</span>
+                                                                        </button>
+                                                                        <button type="button" class="btn">
+                                                                            <i class="fa fa-save"></i><span>Save</span>
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                                <div class="col-md-12">
+                                                                    <div class="card">
+                                                                        <div class="table-responsive">
+                                                                            <table class="table table-sm table-hover">
+                                                                                <thead>
+                                                                                    <tr>
+                                                                                        <th>Grade</th>
+                                                                                        <th>Copra Rate</th>
+                                                                                        <th>Net Wt</th>
+                                                                                        <th>Gross Amount</th>
+                                                                                        <th>Freight Subsidy</th>
+                                                                                        <th>VAT</th>
+                                                                                        <th>Share</th>
+                                                                                        <th>Freight</th>
+                                                                                        <th>CESS</th>
+                                                                                        <th>Net Amt</th>
+                                                                                    </tr>
+                                                                                </thead>
+                                                                                <tbody>
+                                                                                    <tr>
+                                                                                        <td>Value</td>
+                                                                                        <td>Value</td>
+                                                                                        <td>Value</td>
+                                                                                        <td>Value</td>
+                                                                                        <td>Value</td>
+                                                                                        <td>Value</td>
+                                                                                        <td>Value</td>
+                                                                                        <td>Value</td>
+                                                                                        <td>Value</td>
+                                                                                        <td>Value</td>
+
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>Value</td>
+                                                                                        <td>Value</td>
+                                                                                        <td>Value</td>
+                                                                                        <td>Value</td>
+                                                                                        <td>Value</td>
+                                                                                        <td>Value</td>
+                                                                                        <td>Value</td>
+                                                                                        <td>Value</td>
+                                                                                        <td>Value</td>
+                                                                                        <td>Value</td>
+
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                            <td></td>
+                                                                                            <th scope="row"><b>Total</b> </th>
+                                                                                  
+                                                                                        <td><b>Total Value</b> </td>
+                                                                                        <td><b>Total Value</b> </td>
+                                                                                        <td><b>Total Value</b> </td>
+                                                                                        <td><b>Total Value</b> </td>
+                                                                                        <td><b>Total Value</b> </td>
+                                                                                        <td><b>Total Value</b> </td>
+                                                                                        <td><b>Total Value</b> </td>
+                                                                                        <td><b>Total Value</b> </td>
+
+                                                                                    </tr>
+
+                                                                                </tbody>
+                                                                            </table>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                         
+                                                   
+
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div id="Notes" class="tab-pane">
+                                                <div class="f-narrow ">
+                                                    <div class="col-md-12 pl-1 pr-0 ml-auto mb-1 text-right">
+
+                                                        <div class="btnn-group" role="group" aria-label="Basic example">
+                                                            <button type="button" (click)="open1(content1)" class="btn">
+                                                                <i class="fa fa-plus"></i><span>New</span> </button>
+                                                            <button type="button" class="btn">
+                                                                <i class="fa fa-save"></i><span>Save</span> </button>
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="col-md-12 pl-0  pr-0">
+                                                        <div class="card">
+                                                            <div class="table-responsive">
+                                                                <table class="table table-sm table-hover">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th>Notes</th>
+                                                                            <th>Created By</th>
+                                                                            <th>Created Date</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>Value</td>
+                                                                            <td>Value</td>
+                                                                            <td>Value</td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div id="Attachments" class="tab-pane">
+                                                <div class="container-fluid">
+                                                    <div class="row ">
+                                                        <div class="col-md-6 pl-0">
+                                                            <div class="form-group">
+                                                                <label for="">Select a file</label>
+                                                                <input type="file" class="form-control-file">
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="col-md-6 pl-1 pr-0 ml-auto mb-1 text-right">
+
+                                                            <div class="btnn-group" role="group"
+                                                                aria-label="Basic example">
+                                                                <button type="button" class="btn">
+                                                                    <i class="fa fa-upload"></i><span>Upload</span>
+                                                                </button>
+                                                                <button type="button" class="btn">
+                                                                    <i class="fa fa-save"></i><span>Save</span>
+                                                                </button>
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="col-md-12 pl-0  pr-0">
+                                                            <div class="card">
+                                                                <div class="table-responsive">
+                                                                    <table class="table table-sm table-hover">
+                                                                        <thead>
+                                                                            <tr>
+                                                                                <th>File Name</th>
+                                                                                <th>Uploaded By</th>
+                                                                                <th>Uploaded Date</th>
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td>Value</td>
+                                                                                <td>Value</td>
+                                                                                <td>Value</td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <div id="Status" class="tab-pane">
+                                                <div class="container-fluid">
+                                                    <div class="row ">
+
+                                                        <div class="col-md-12 pl-0  pr-0">
+                                                            <div class="card">
+                                                                <div class="table-responsive">
+                                                                    <table class="table table-sm table-hover">
+                                                                        <thead>
+                                                                            <tr>
+                                                                                <th>Changed By</th>
+                                                                                <th>Effective Date</th>
+                                                                                <th>Status</th>
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td>Value</td>
+                                                                                <td>Value</td>
+                                                                                <td>Value</td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div id="Invoice" class="tab-pane">
+                                                <div class="container-fluid">
+                                                    <div class="row ">
+                                                        <div class="col-md-12 pl-0  pr-0">
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<ng-template #content let-modal>
+    <div class="modal-header">
+        <h4 class="modal-title" id="modal-basic-title">New / Edit Item</h4>
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss()">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-4 px-1 border-right">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p class="heading">Weight Calculation</p>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group ">
+                                    <label>Weight Bridge No</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group ">
+                                    <label>Copra Grade</label>
+                                    <select class="form-control">
+                                        <option value="">--Select--</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-12 border-bottom">
+                                <div class="form-group ">
+                                    <label>Copra Certificate No</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-12 ">
+                                <div class="form-group ">
+                                    <label>Total Bags</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group ">
+                                    <label>Gross Weight (Kg) </label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group ">
+                                    <label>Sack Tare (Kg)</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group ">
+                                    <label>Net Weight (Metric Tonne)</label>
+                                    <div class="readOnly">
+                                        <b>Value</b>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12 ml-auto text-right">
+                                <button type="button" class="btn"><i class="fa fa-floppy-o"
+                                        aria-hidden="true"></i><span>Calculate</span> </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 px-1 border-right">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p class="heading">Freight Calculation</p>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group ">
+                                    <label>Freight / Metric Tonne</label>
+                                    <div class="readOnly"><b>Value</b></div>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group ">
+                                    <label>Net Weight(Metric Tonne)</label>
+                                    <div class="readOnly"><b>Value</b></div>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group ">
+                                    <label>Total Freight</label>
+                                    <div class="readOnly"><b>Value</b></div>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group ">
+                                    <label>Total Freight</label>
+                                    <div class="readOnly"><b>Value</b></div>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <p class="heading">Freight Subsidy</p>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group ">
+                                    <label>Freight Subsidy / Metric Tonne</label>
+                                    <div class="readOnly"><b>Value</b></div>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group ">
+                                    <label>Net Weight(Metric Tonne)</label>
+                                    <div class="readOnly"><b>Value</b></div>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group ">
+                                    <label>Total Freight Subsidy</label>
+                                    <div class="readOnly"><b>Value</b></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 px-1">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p class="heading">Payment Calculation</p>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="card">
+                                    <div class="table-responsive">
+                                        <table class="table table-sm table-hover">
+
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="row">Copra Rate</th>
+                                                    <td>Value</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Gross Amount</th>
+                                                    <td>Value</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Add Feight Subsidy</th>
+                                                    <td>Value</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Add VAT</th>
+                                                    <td>Value</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Less Share</th>
+                                                    <td>Value</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Less Feight</th>
+                                                    <td>Value</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Less CESS</th>
+                                                    <td>Value</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">NETT Amount($)</th>
+                                                    <td>Value</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button class="btn">
+            <i class="fa fa-save"></i><span> Save</span>
+        </button>
+        <button class="btn">
+            <i class="fa fa-refresh"></i><span> Refresh</span>
+        </button>
+        <button class="btn">
+            <i class="fa fa-eraser"></i><span> Clear</span>
+        </button>
+    </div>
+</ng-template>
+<ng-template #content1 let-modal>
+    <div class="modal-header">
+        <h4 class="modal-title" id="modal-basic-title">Notes</h4>
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss()">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label for="">Notes</label>
+                        <textarea class="form-control"></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button class="btn">
+            <i class="fa fa-save"></i><span> Save</span>
+        </button>
+        <button class="btn">
+            <i class="fa fa-refresh"></i><span> Refresh</span>
+        </button>
+        <button class="btn">
+            <i class="fa fa-eraser"></i><span> Clear</span>
+        </button>
+    </div>
+</ng-template>
+<ng-template #content2 let-modal style="max-width: 1421px !important;">
+    <div class="modal-header">
+        <h4 class="modal-title" id="modal-basic-title">Vendor Search</h4>
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss()">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <app-vendor-search></app-vendor-search>      
+    </div>
+
+</ng-template>

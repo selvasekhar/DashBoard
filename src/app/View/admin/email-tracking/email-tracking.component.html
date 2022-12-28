@@ -1,0 +1,191 @@
+<div class="container-fluid  pt-5">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="bread ">
+                <div>
+                    <span>Admin</span>
+                    <i class="fa fa-caret-right ml-2" aria-hidden="true"></i> Email Tracking
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12 mt-1 mb-3 d-flex">
+            <h6 class="mb-0">Email</h6>
+            <div class="ml-auto text-right">
+                <div class="btnn-group">
+                    <button type="button" class="btn" routerLink="/RoleDetail"><i
+                            class="fa fa-plus"></i><span>New</span> </button>
+                    <button type="button" class="btn" (click)="openSearchPanel()"><i
+                            class="fa fa-search"></i><span>Search</span> </button>
+                    <button type="button" class="btn"><i class="fa fa-eraser"></i><span>Clear</span> </button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12" [ngClass]="searchPanel ? 'show':'hide'">
+            <div class="card py-3">
+                <div class="close-btn" (click)="closeSearchPanel()"><i class="fa fa-times-circle"
+                        aria-hidden="true"></i></div>
+                <form>
+                    <div class="container-fluid">
+                        <div class="row d-flex">
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="">To Email ID</label>
+                                    <input type="text" class="form-control" id="">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="">Cc Email ID</label>
+                                    <input type="text" class="form-control" id="">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="">From Date</label>
+                                    <div class="input-group">
+                                        <input class="form-control" name="dp" ngbDatepicker #d="ngbDatepicker"
+                                            (click)="d.toggle()">
+                                        <div class="input-group-append">
+                                            <button class="datebtn" (click)="d.toggle()" type="button">
+                                                <i class="fa fa-calendar"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="">To Date</label>
+                                    <div class="input-group">
+                                        <input class="form-control" name="dp1" (click)="d1.toggle()" ngbDatepicker
+                                            #d1="ngbDatepicker">
+                                        <div class="input-group-append">
+                                            <button class="datebtn" (click)="d1.toggle()" type="button">
+                                                <i class="fa fa-calendar"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="form-group">
+                                    <label for="">Email Status</label>
+                                    <select class="form-control">
+                                        <option value="">--Select--</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="col-md-12 mt-1  d-flex">
+            <p class="s-text ">Showing 1 - 10 of 14 results</p>
+            <div class="ml-auto text-right">
+                <ngb-pagination [collectionSize]="50" [(page)]="currentPage" size="sm" [boundaryLinks]="true">
+                </ngb-pagination>
+            </div>
+        </div>
+        <!-- <div class="col-md-12">
+            <div class="card">
+                <div class="table-responsive panelh">
+                    <table class="table table-sm table-hover">
+                        <thead class="thead-light">
+                            <tr>
+                                <th>From Email ID</th>
+                                <th>To Email ID</th>
+                                <th>Cc Mail ID</th>
+                                <th>Email Status</th>
+                                <th>Date Sent</th>
+                                <th>Email Content</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div> -->
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+                    <a href="">Today</a>
+                    <a href="">Month</a>
+                </div>
+                <div class="card-body">
+                    <table>
+                        <tbody>
+                            <tr>
+                                    <div id="accordion" role="tablist">
+                                            <div class="card" *ngFor="let data of datas">
+                                                <div class="card-header" role="tab" [id]="data.id">
+                                                        <div class="container-fluid" data-toggle="collapse"  attr.href="#h{{data.id}}" aria-expanded="true"
+                                                        attr.aria-controls="h{{data.id}}">
+                                                                <div class="row">
+                                                                    <div class="col-md-4 emialFrom">From : Madhvi08@gmail.com
+                                                                        <div>To : Anup56@gmail.com</div>
+                                                                    </div>
+                                                                    <div class="col-md-6  ">
+                                                                        <div class="emialContent">
+                                                                            <b>Subject - </b>Content.... is a method of exchanging messages
+                                                                            ("mail") between people using electronic devices. Invented by Ray
+                                                                            Tomlinson, email first entered limited use in the 1960s and by the
+                                                                            mid-1970s had taken the form now recognized as email. Email operates
+                                                                            across computer networks, which today is primarily the Internet.
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-2 emialTime"><b>Nov 5 &nbsp;,&nbsp; 05:00</b></div>
+                        
+                        
+                                                                </div>
+                                                            </div>
+                                            
+                                                </div>
+            
+                                                <div id="h{{data.id}}" class="collapse" role="tabpanel"
+                                                    [attr.aria-labelledby]="data.id">
+                                                    <div class="card-body">
+                                                 <div class="container-fluid">
+                                                     <div class="row">
+                                                         <div class="col-md-6 border-right">
+                                                             <div><b>From : </b>xyz@gmail.com</div>
+                                                             <div><b>To : </b>xyz@gmail.com</div>
+                                                             <div><b>Cc : </b>xyz@gmail.com</div>
+                                                             <div><b>Status : </b>Active</div>
+                                                         </div>
+                                                         <div class="col-md-6">
+                                                                <div><b>Subject : </b>xyz</div>
+                                                                <div><b>Content : </b>is a method of exchanging messages
+                                                                    ("mail") between people using electronic devices. Invented by Ray
+                                                                    Tomlinson, email first entered limited use in the 1960s and by the
+                                                                    mid-1970s had taken the form now recognized as email. Email operates
+                                                                    across computer networks, which today is primarily the Internet.</div>
+                                                         </div>
+                                                     </div>
+                                                 </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+            
+                                        </div>
+
+                            </tr>
+
+                          
+                        </tbody>
+
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

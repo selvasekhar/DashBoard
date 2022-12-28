@@ -1,0 +1,180 @@
+<div class="container-fluid  pt-5">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="bread ">
+                <div>
+                    <span>Admin</span>
+                    <i class="fa fa-caret-right ml-2" aria-hidden="true"></i> Location
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12 mt-1 mb-3 d-flex">
+            <h6 class="mb-0"> Location</h6>
+            <div class="ml-auto text-right">
+                <div class="btnn-group">
+                    <button class="btn " (click)="open(content)">
+                        <i class="fa fa-plus"></i><span>New</span>
+                    </button>
+                    <button type="button" class="btn" (click)="openSearchPanel()"><i
+                            class="fa fa-search"></i><span>Search</span> </button>
+                    <button type="button" class="btn"><i class="fa fa-eraser"></i><span>Clear</span> </button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12" [ngClass]="searchPanel ? 'show':'hide'">
+            <div class="card py-3">
+                <div class="close-btn" (click)="closeSearchPanel()"><i class="fa fa-times-circle"
+                        aria-hidden="true"></i></div>
+                <form>
+                    <div class="container-fluid">
+                        <div class="row d-flex">
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="">Location</label>
+                                    <select class="form-control">
+                                        <option value="">--Select--</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="">Region</label>
+                                    <select class="form-control">
+                                        <option value="">--Select--</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="">Effective Date From</label>
+                                    <div class="input-group">
+                                        <input class="form-control" name="dp" ngbDatepicker #d="ngbDatepicker"
+                                            (click)="d.toggle()">
+                                        <div class="input-group-append">
+                                            <button class="datebtn" (click)="d.toggle()" type="button">
+                                                <i class="fa fa-calendar"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="">Effective Date To</label>
+                                    <div class="input-group">
+                                        <input class="form-control" name="dp1" (click)="d1.toggle()" ngbDatepicker
+                                            #d1="ngbDatepicker">
+                                        <div class="input-group-append">
+                                            <button class="datebtn" (click)="d1.toggle()" type="button">
+                                                <i class="fa fa-calendar"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="">Status</label>
+                                    <select class="form-control">
+                                        <option value="">--Select--</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="col-md-12 mt-1  d-flex">
+            <p class="s-text ">Showing 1 - 10 of 14 results</p>
+            <div class="ml-auto text-right">
+                <ngb-pagination [collectionSize]="50" [(page)]="currentPage" size="sm" [boundaryLinks]="true">
+                </ngb-pagination>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="card">
+                <div class="table-responsive panelh">
+                    <table class="table table-sm table-hover">
+                        <thead class="thead-light">
+                            <tr>
+                                <th>Location</th>
+                                <th>Region</th>
+                                <th>Effective Date</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<ng-template #content let-modal>
+    <div class="modal-header">
+        <h4 class="modal-title" id="modal-basic-title">Location</h4>
+        <button type="button" class="close" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <form>
+            <div class="col-md-12">
+
+                <div class="form-group">
+                    <label for="">Location</label>
+                    <select class="form-control">
+                        <option value="">--Select--</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="">Region</label>
+                    <select class="form-control">
+                        <option value="">--Select--</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="">Effective Date</label>
+                    <div class="input-group">
+                        <input class="form-control" placeholder="dd-mm-yyyy" (click)="d3.toggle()" name="dp"
+                            ngbDatepicker #d3="ngbDatepicker">
+                        <div class="input-group-append">
+                            <button class="datebtn" (click)="d3.toggle()" type="button">
+                                <i class="fa fa-calendar text-danger"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="">Status</label>
+                    <select class="form-control">
+                        <option value="">--Select--</option>
+                    </select>
+                </div>
+
+            </div>
+        </form>
+    </div>
+    <div class="modal-footer">
+        <button class="btn">
+            <i class="fa fa-save"></i><span>Save</span>
+        </button>
+        <button class="btn">
+            <i class="fa fa-refresh"></i><span>Refresh</span>
+        </button>
+        <button class="btn">
+            <i class="fa fa-eraser"></i><span>Clear</span>
+        </button>
+    </div>
+</ng-template>

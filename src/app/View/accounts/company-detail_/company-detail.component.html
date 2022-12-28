@@ -1,0 +1,645 @@
+<div class="container-fluid  pt-5">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="bread ">
+                <div>
+                    <span><a routerLink="/view/admin">Account</a> </span>
+                    <i class="fa fa-caret-right ml-2" aria-hidden="true"></i><a routerLink="/view/admin/user">
+                        Company</a>
+                    <i class="fa fa-caret-right ml-2" aria-hidden="true"></i><b> Detail</b>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12 mt-1">
+            <div class="card">
+                <div class="card-body">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="ml-auto text-right pb-2">
+                                    <div class="btnn-group" role="group" aria-label="Basic example">
+                                        <button type="button" class="btn"><i class="fa fa-floppy-o"
+                                                aria-hidden="true"></i><span>Save</span> </button>
+                                        <button type="button" class="btn"><i class="fa fa-refresh"
+                                                aria-hidden="true"></i><span>Refresh</span> </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-md-5 alert alert-danger"
+                                        style="background-color: #ffffff; border-color: #cacaca; color: #000;">
+                                        <div class="row">
+                                            <div class="col-md-6">
+
+                                                <div class="form-group">
+                                                    <label for="">Company Name</label>
+                                                    <input type="text" class="form-control">
+
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="">Phone No</label>
+                                                    <input type="text" class="form-control">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="">Email ID</label>
+                                                    <input type="text" class="form-control">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="">Fax No</label>
+                                                    <input type="text" class="form-control">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="">Effective Date</label>
+                                                    <div class="input-group">
+                                                        <input class="form-control" placeholder="dd-mm-yyyy"
+                                                            (click)="d1.toggle()" name="dp" ngbDatepicker
+                                                            #d1="ngbDatepicker">
+                                                        <div class="input-group-append">
+                                                            <button class="datebtn" (click)="d1.toggle()" type="button">
+                                                                <i class="fa fa-calendar text-danger"></i>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="">Status</label>
+                                                    <select class="form-control">
+                                                        <option value="">--Select--</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-5 alert alert-danger"
+                                        style="background-color: #ffffff;border-color: #cacaca; color:#000">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="">Address Line 1</label>
+                                                    <input type="text" class="form-control">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="">Address Line 2</label>
+                                                    <input type="text" class="form-control">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="">Address Line 3</label>
+                                                    <input type="text" class="form-control">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="">Address Line 4</label>
+                                                    <input type="text" class="form-control">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="">Website</label>
+                                                    <input type="text" class="form-control">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="">Add Company Logo</label>
+                                                    <input type="file" class="form-control-file"
+                                                        id="exampleFormControlFile1" accept='image/*'
+                                                        (change)="preview(file.files)" #file>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2 alert alert-danger btn_logo">
+                                        <div class="editImg">
+                                                <i class="fa fa-pencil" aria-hidden="true"></i>
+                                        </div>
+                                        <div class="card sigCard float-right">
+                                            <img class="img-responsive sigImg" [src]="imgURL" *ngIf="imgURL" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-12 mt-1">
+            <div class="card">
+                <!-- <div class="card-header">
+                    Additional Info
+                </div> -->
+                <div class="card-body p-0">
+                    <form>
+                        <div class="container-fluid">
+                            <div class="row verticaltab">
+                                <div class="col-md-2 pt28 px-0">
+                                    <div class="tab nopadding">
+                                        <ul class="nav nav-tabs">
+                                            <li class="nav-item">
+                                                <a data-toggle="tab" class="nav-link active" href="#group">Branches
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a data-toggle="tab" class="nav-link" href="#role">Fiscal Year</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a data-toggle="tab" class="nav-link" href="#user">Other Details</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-md-10 px-0">
+                                    <div class="wizcontent1">
+                                        <div class="tab-content">
+                                            <div id="group" class="tab-pane active">
+                                                <div class="f-narrow ">
+                                                    <div class="col-md-12 ml-auto pl-1 mb-1 pr-0 text-right">
+                                                        <div class="btnn-group" role="group" aria-label="Basic example">
+                                                            <button type="button" class="btn "
+                                                                (click)="open(content)"><i
+                                                                    class="fa fa-plus"></i><span>New</span> </button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12 pl-0  pr-0">
+                                                        <div class="card">
+                                                            <div class="table-responsive">
+                                                                <table class="table table-sm table-hover">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th>Name</th>
+                                                                            <th>Location</th>
+                                                                            <th>Branch</th>
+                                                                            <th>Phone No</th>
+                                                                            <th>Email ID</th>
+                                                                            <th>Start Date</th>
+                                                                            <th>End Date</th>
+                                                                            <th>Status</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>Value</td>
+                                                                            <td>Value</td>
+                                                                            <td>Value</td>
+                                                                            <td>Value</td>
+                                                                            <td>Value</td>
+                                                                            <td>Value</td>
+                                                                            <td>Value</td>
+                                                                            <td>Value</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>Value</td>
+                                                                            <td>Value</td>
+                                                                            <td>Value</td>
+                                                                            <td>Value</td>
+                                                                            <td>Value</td>
+                                                                            <td>Value</td>
+                                                                            <td>Value</td>
+                                                                            <td>Value</td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div id="role" class="tab-pane">
+
+                                                <div class="container">
+                                                    <div class="row">
+                                                        <div class="col-sm">
+                                                            <div class="f-narrow ">
+                                                                <div
+                                                                    class="col-md-12 ml-auto pl-1 mb-1 pr-0 text-right">
+                                                                    <div class="btnn-group" role="group"
+                                                                        aria-label="Basic example">
+                                                                        <button type="button" class="btn "
+                                                                            (click)="open1(content1)"><i
+                                                                                class="fa fa-plus"></i><span>New</span>
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-12 pl-0  pr-0">
+                                                                    <div class="card">
+                                                                        <div class="table-responsive">
+                                                                            <table class="table table-sm table-hover">
+                                                                                <thead>
+                                                                                    <tr>
+                                                                                        <th>Fiscal Year</th>
+                                                                                        <th>Start Date</th>
+                                                                                        <th>End Date</th>
+                                                                                        <th>Status</th>
+                                                                                        <th>Calender Month</th>
+                                                                                    </tr>
+                                                                                </thead>
+                                                                                <tbody>
+                                                                                    <tr>
+                                                                                        <td>Value</td>
+                                                                                        <td>Value</td>
+                                                                                        <td>Value</td>
+                                                                                        <td>Value</td>
+                                                                                        <td>Value</td>
+
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>Value</td>
+                                                                                        <td>Value</td>
+                                                                                        <td>Value</td>
+                                                                                        <td>Value</td>
+                                                                                        <td>Value</td>
+
+                                                                                    </tr>
+                                                                                </tbody>
+                                                                            </table>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm">
+                                                            <div class="f-narrow ">
+                                                                <div
+                                                                    class="col-md-12 ml-auto pl-1 mb-1 pr-0 text-right">
+                                                                    <div class="btnn-group" role="group"
+                                                                        aria-label="Basic example">
+                                                                        <button type="button" class="btn "
+                                                                            (click)="open2(content2)"><i
+                                                                                class="fa fa-plus"></i><span>New</span>
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-12 pl-0  pr-0">
+                                                                    <div class="card">
+                                                                        <div class="table-responsive">
+                                                                            <table class="table table-sm table-hover">
+                                                                                <thead>
+                                                                                    <tr>
+                                                                                        <th>Term</th>
+                                                                                        <th> Start Date</th>
+                                                                                        <th> End Date</th>
+                                                                                        <th> Status</th>
+                                                                                    </tr>
+                                                                                </thead>
+                                                                                <tbody>
+                                                                                    <tr>
+                                                                                        <td>Value</td>
+                                                                                        <td>Value</td>
+                                                                                        <td>Value</td>
+                                                                                        <td>Value</td>
+
+
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>Value</td>
+                                                                                        <td>Value</td>
+                                                                                        <td>Value</td>
+                                                                                        <td>Value</td>
+
+
+                                                                                    </tr>
+                                                                                </tbody>
+                                                                            </table>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div id="user" class="tab-pane">
+                                                <div class="f-narrow ">
+                                                    <div class="col-md-12 pl-1 pr-0 ml-auto mb-1 text-right">
+
+                                                        <div class="btnn-group" role="group" aria-label="Basic example">
+                                                            <button type="button" class="btn">
+                                                                <i class="fa fa-plus"></i><span>Save</span> </button>
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="col-md-12 pl-1 pr-0 mt-1 ">
+                                                        <div class="container-fluid">
+                                                            <div class="row">
+                                                                <div class="col-md-4">
+                                                                    <div class="form-group">
+                                                                        <label for="">Currency</label>
+                                                                        <select class="form-control">
+                                                                            <option value="">--Select--</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-4">
+                                                                    <div class="form-group">
+                                                                        <label for="">Symbol</label>
+                                                                        <input type="text" class="form-control">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-4">
+                                                                    <div class="form-group">
+                                                                        <label for="">Suffix Symbol</label>
+                                                                        <div>
+                                                                            <div
+                                                                                class="custom-control custom-radio custom-control-inline">
+                                                                                <input type="radio" id="customRadio1"
+                                                                                    name="customRadio"
+                                                                                    class="custom-control-input">
+                                                                                <label class="custom-control-label"
+                                                                                    for="customRadio1">Yes</label>
+                                                                            </div>
+                                                                            <div
+                                                                                class="custom-control custom-radio custom-control-inline">
+                                                                                <input type="radio" id="customRadio2"
+                                                                                    name="customRadio"
+                                                                                    class="custom-control-input">
+                                                                                <label class="custom-control-label"
+                                                                                    for="customRadio2">No</label>
+                                                                            </div>
+                                                                        </div>
+
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-4">
+                                                                    <div class="form-group">
+                                                                        <label for="">No of Decimal Place</label>
+                                                                        <input type="text" class="form-control">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-4">
+                                                                    <div class="form-group">
+                                                                        <label for="">Currency Value Name</label>
+                                                                        <input type="text" class="form-control">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-4">
+                                                                    <div class="form-group">
+                                                                        <label for="">Decimal Value Name</label>
+                                                                        <input type="text" class="form-control">
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<ng-template #content let-modal>
+    <div class="modal-header">
+        <h4 class="modal-title" id="modal-basic-title">Branch Detail</h4>
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>Branch Alias Name </label>
+                        <input type="text" class="form-control">
+                    </div>
+
+                    <div class="form-group ">
+                        <label>Start Date </label>
+
+                        <div class="input-group">
+                            <input class="form-control" placeholder="yyyy-mm-dd" name="dp" (click)="d5.toggle()"
+                                ngbDatepicker #d5="ngbDatepicker">
+                            <div class="input-group-append">
+                                <button class="datebtn input-group-text" (click)="d5.toggle()" type="button">
+                                    <i class="fa fa-calendar text-danger"></i>
+                                </button>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group ">
+                        <label>End Date </label>
+
+                        <div class="input-group">
+                            <input class="form-control" placeholder="yyyy-mm-dd" name="dp" (click)="d6.toggle()"
+                                ngbDatepicker #d6="ngbDatepicker">
+                            <div class="input-group-append">
+                                <button class="datebtn input-group-text" (click)="d6.toggle()" type="button">
+                                    <i class="fa fa-calendar text-danger"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group ">
+                        <label>Location</label>
+                        <select class="form-control">
+                            <option value="">--Select--</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Fax No</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>Term Closure Period</label>
+                        <input type="text" class="form-control">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group pt-3 pb-2">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="customCheck1">
+                            <label class="custom-control-label " for="customCheck1">Head Office</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group ">
+                        <label>Status</label>
+                        <select class="form-control">
+                            <option value="">--Select--</option>
+                        </select>
+                    </div>
+                    <div class="form-group ">
+                        <label>Branch</label>
+                        <select class="form-control">
+                            <option value="">--Select--</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Phone No</label>
+                        <input type="text" class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Email ID</label>
+                        <input type="text" class="form-control">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button class="btn">
+            <i class="fa fa-save"></i><span> Save</span>
+        </button>
+        <button class="btn">
+            <i class="fa fa-refresh"></i><span> Refresh</span>
+        </button>
+        <button class="btn">
+            <i class="fa fa-eraser"></i><span> Clear</span>
+        </button>
+    </div>
+</ng-template>
+<ng-template #content1 let-modal>
+    <div class="modal-header">
+        <h4 class="modal-title" id="modal-basic-title">Fiscal Year Detail</h4>
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <form>
+            <div class="col-md-12 ">
+
+                <div class="form-group ">
+                    <label>Start Date</label>
+
+                    <div class="input-group">
+                        <input class="form-control" placeholder="yyyy-mm-dd" name="dp" (click)="d5.toggle()"
+                            ngbDatepicker #d5="ngbDatepicker">
+                        <div class="input-group-append">
+                            <button class="datebtn input-group-text" (click)="d5.toggle()" type="button">
+                                <i class="fa fa-calendar text-danger"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group ">
+                    <label>End Date</label>
+                    <div class="input-group">
+                        <input class="form-control" placeholder="yyyy-mm-dd" name="dp" (click)="d6.toggle()"
+                            ngbDatepicker #d6="ngbDatepicker">
+                        <div class="input-group-append">
+                            <button class="datebtn input-group-text" (click)="d6.toggle()" type="button">
+                                <i class="fa fa-calendar text-danger"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group py-2">
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck1">
+                        <label class="custom-control-label " for="customCheck1">Calendar Month</label>
+                    </div>
+                </div>
+            </div>
+
+
+        </form>
+    </div>
+    <div class="modal-footer">
+        <button class="btn">
+            <i class="fa fa-save"></i><span> Save</span>
+        </button>
+        <button class="btn ">
+            <i class="fa fa-refresh"></i><span> Refresh</span>
+        </button>
+        <button class="btn">
+            <i class="fa fa-eraser"></i><span> Clear</span>
+        </button>
+    </div>
+</ng-template>
+<ng-template #content2 let-modal>
+    <div class="modal-header">
+        <h4 class="modal-title" id="modal-basic-title">Term Detail</h4>
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <form>
+            <div class="col-md-12 ">
+                <div class="form-group">
+                    <label for="">Term No</label>
+                    <input type="text" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="">Term Name</label>
+                    <input type="text" class="form-control">
+                </div>
+                <div class="form-group ">
+                    <label>Start Date</label>
+
+                    <div class="input-group">
+                        <input class="form-control" placeholder="yyyy-mm-dd" name="dp" (click)="d5.toggle()"
+                            ngbDatepicker #d5="ngbDatepicker">
+                        <div class="input-group-append">
+                            <button class="datebtn input-group-text" (click)="d5.toggle()" type="button">
+                                <i class="fa fa-calendar text-danger"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group ">
+                    <label>End Date</label>
+                    <div class="input-group">
+                        <input class="form-control" placeholder="yyyy-mm-dd" name="dp" (click)="d6.toggle()"
+                            ngbDatepicker #d6="ngbDatepicker">
+                        <div class="input-group-append">
+                            <button class="datebtn input-group-text" (click)="d6.toggle()" type="button">
+                                <i class="fa fa-calendar text-danger"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="">Status value</label>
+                    <input type="text" class="form-control">
+                </div>
+            </div>
+
+
+        </form>
+    </div>
+    <div class="modal-footer">
+        <button class="btn">
+            <i class="fa fa-save"></i><span> Save</span>
+        </button>
+        <button class="btn ">
+            <i class="fa fa-refresh"></i><span> Refresh</span>
+        </button>
+        <button class="btn">
+            <i class="fa fa-eraser"></i><span> Clear</span>
+        </button>
+    </div>
+</ng-template>

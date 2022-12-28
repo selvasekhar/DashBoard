@@ -1,0 +1,192 @@
+<div class="container-fluid  pt-5">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="bread ">
+                <div>
+
+                    <span><a routerLink="/view/admin">Admin</a></span>
+                    <i class="fa fa-caret-right ml-2" aria-hidden="true"></i><a routerLink="/view/admin/RoleSearch"> Role</a>  <i class="fa fa-caret-right ml-2"
+                        aria-hidden="true"></i><b> Detail</b> 
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12 mt-1">
+            <div class="card">
+                <div class="card-body">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="ml-auto text-right">
+                                    <div class="btnn-group" role="group" aria-label="Basic example">
+                                        <button type="button" class="btn"><i class="fa fa-floppy-o"
+                                                aria-hidden="true"></i><span>Save</span> </button>
+                                        <button type="button" class="btn"><i class="fa fa-refresh"
+                                                aria-hidden="true"></i><span>Refresh</span> </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-2">
+                                <div class="form-group">
+                                    <label for="">Role Name</label>
+                                    <input type="text" placeholder="Search..." class="form-control" id="">
+                                </div>
+                            </div>
+
+                            <div class="col-md-2">
+                                <div class="form-group">
+                                    <label for="">Status</label>
+                                    <select class="form-control">
+                                        <option value="">--Select--</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="form-group">
+                                    <label for="">Module Name</label>
+                                    <select class="form-control">
+                                        <option value="">--Select--</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="form-group">
+                                    <label for="">Begin Date (From)</label>
+                                    <div class="input-group">
+                                        <input class="form-control" name="dp" ngbDatepicker #d="ngbDatepicker"
+                                            (click)="d.toggle()">
+                                        <div class="input-group-append">
+                                            <button class="datebtn" (click)="d.toggle()" type="button">
+                                                <i class="fa fa-calendar"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="form-group">
+                                    <label for="">Begin Date (To)</label>
+                                    <div class="input-group">
+                                        <input class="form-control" name="dp1" (click)="d1.toggle()" ngbDatepicker
+                                            #d1="ngbDatepicker">
+                                        <div class="input-group-append">
+                                            <button class="datebtn" (click)="d1.toggle()" type="button">
+                                                <i class="fa fa-calendar"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="form-group">
+                                    <label for="">End Date (From)</label>
+                                    <div class="input-group">
+                                        <input class="form-control" name="dp2" (click)="d2.toggle()" ngbDatepicker
+                                            #d2="ngbDatepicker">
+                                        <div class="input-group-append">
+                                            <button class="datebtn" (click)="d2.toggle()" type="button">
+                                                <i class="fa fa-calendar"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="form-group">
+                                    <label for="">End Date (To)</label>
+                                    <div class="input-group">
+                                        <input class="form-control" name="dp3" (click)="d3.toggle()" ngbDatepicker
+                                            #d3="ngbDatepicker">
+                                        <div class="input-group-append">
+                                            <button class="datebtn" (click)="d3.toggle()" type="button">
+                                                <i class="fa fa-calendar"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-md-12 mt-1">
+            <div class="card">
+                <!-- <div class="card-header">
+                    Additional Info
+                </div> -->
+                <div class="card-body">
+                    <form>
+                        <div class="container-fluid">
+                            <div class="row">
+
+
+                                <div class="col-md-3">
+
+                                    <div class="form-group d-flex">
+                                        <label for="">Status</label>
+                                        <select class="form-control ml-3">
+                                            <option value="">--Select--</option>
+                                        </select>
+                                    </div>
+
+                                </div>
+                                <div class="col-md-9 ml-auto pl-1 mb-1 pr-0 text-right">
+                                    <div class="btnn-group" role="group" aria-label="Basic example">
+                                        <button type="button" class="btn"><i class="fa fa-floppy-o"
+                                                aria-hidden="true"></i><span>Save</span> </button>
+                                        <button type="button" class="btn " routerLink="/userDetail"><i
+                                                class="fa fa-plus"></i><span>New</span> </button>
+                                        <button type="button" class="btn " (click)="openSearchPanel()"><i
+                                                class="fa fa-folder-open-o" aria-hidden="true"></i><span>Open</span>
+                                        </button>
+                                        <button type="button" class="btn "><i class="fa fa-trash"
+                                                aria-hidden="true"></i><span>Delete</span> </button>
+                                    </div>
+                                </div>
+                                <div class="col-md-12  px-0">
+                                    <div class="card">
+                                        <div class="table-responsive">
+                                            <table class="table table-sm table-hover">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Resource Id</th>
+                                                        <th>Screen Name</th>
+                                                        <th> Resource</th>
+                                                        <th> Resource Type</th>
+                                                        <th>Permission Id</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Value</td>
+                                                        <td>Value</td>
+                                                        <td>Value</td>
+                                                        <td>Value</td>
+                                                        <td>Value</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Value</td>
+                                                        <td>Value</td>
+                                                        <td>Value</td>
+                                                        <td>Value</td>
+                                                        <td>Value</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,19 @@
+.emialFrom::after {
+  position: absolute;
+  display: block;
+  width: 0.28rem;
+  border-radius: 0.3rem;
+  height: 70%;
+  right: 0;
+  top: 0.25rem;
+  content: "";
+  background: #5578eb;
+}
+.table-responsive {
+  min-height: calc(100vh - 312px);
+  max-height: calc(100vh - 312px);
+  overflow: auto;
+}
+table {
+  width: 100%;
+}

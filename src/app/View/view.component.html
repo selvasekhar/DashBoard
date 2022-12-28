@@ -1,0 +1,138 @@
+<nav class="navbar fixed-top py-0 navbar-expand-lg ">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+        data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"><i class="fa fa-bars" aria-hidden="true"></i></span>
+    </button>
+    <a class="navbar-brand" href="#!"> <img src="../../assets/img/copra_logo.png"  class="logo_one"/></a>
+    <a class="navbar-brand" href="#!"> <img src="../../assets/img/logo-1.png"  class="logo_two"/></a>
+
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <div class="tab  m-auto">
+            <ul class="navbar-nav  mt-2 mt-md-0">
+                <li class="nav-item" routerLink="/view/admin" routerLinkActive="active">
+                    <a class="nav-link" data-toggle="tab">Admin <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item" routerLink="/view/account" routerLinkActive="active">
+                    <a class="nav-link">Accounts</a>
+                </li>
+                <li class="nav-item" routerLink="/view/sale" routerLinkActive="active">
+                    <a class="nav-link">Sales</a>
+                </li>
+                <li class="nav-item" routerLink="/view/purchase" routerLinkActive="active">
+                    <a class="nav-link">Purchase</a>
+                </li>
+            </ul>
+        </div>
+
+        <ul class="navbar-nav m-0 float-right">
+            <li class="nav-item">
+                <a class="nav-link white backBtn" href="#!"><i class="fa fa-chevron-left" aria-hidden="true"></i>
+                    Back</a>
+            </li>
+         
+
+            <li class="nav-item">
+                <a class="nav-link white" (mouseenter)="show()"  data-toggle="dropdown" href="#" role="button"
+                    aria-haspopup="true" aria-expanded="false"><i class="fa fa-user-circle-o fa-lg" aria-hidden="true"></i></a>
+
+            </li>
+            <!-- <li class="nav-item">
+                <a class="nav-link white" (click)="click()" data-toggle="dropdown" href="#" role="button"
+                    aria-haspopup="true" aria-expanded="false"><i class="fa fa-power-off" aria-hidden="true"></i></a>
+
+            </li> -->
+        </ul>
+    </div>
+</nav>
+<div class="userDetail" [ngClass]="userDetail ? 'show' : 'hide'" (mouseenter)="show()" (mouseleave) ="close()">
+<!-- <div class="userDetail" [ngClass]="userDetail ? 'show' : 'hide'"> -->
+    <div class="firstLetterDiv">
+            <h6 class="float-left"><b>My Account</b> </h6>
+            <!-- <div class="FirstLetter"><div class="name"><button class="ml-auto text-right btnClose"><span style="
+                font-size: 16px;
+                font-weight: bold;
+                margin: 0px 10px 6px 4px;
+                ">Logout</span><i aria-hidden="true" class="fa fa-sign-out"></i></button></div></div> -->
+    </div>
+
+    
+
+
+
+    <div class="userContent">
+        <!-- <div class="userHeader d-flex">
+     
+            <button class="ml-auto text-right btnClose"><i class="fa fa-times" aria-hidden="true"></i></button>
+        </div> -->
+        <div class="userContent pb-0">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-2">
+                        <div class="headerAvatar m-auto">
+                                <div class="name1">
+                                        S
+                                    </div>                                 
+                        </div>
+                        <div class="text-center" style="visibility: hidden;">
+                                <button class="logout">Logout</button>
+                            </div>
+                    </div>
+                    <div class="col-md-7">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <h5>Sam John E</h5>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                            <div class="col-md-5 col-sm-5 p-0"> <label for="">Current Time
+                                                </label></div>
+                                            <div class="col-md-2 col-sm-2">:</div>
+                                            <div class="col-md-5 col-sm-5 p-0"> <label for="">8.40 PM</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                            <div class="col-md-5 col-sm-5 p-0"> <label for="">Current Date
+                                                </label></div>
+                                            <div class="col-md-2 col-sm-2">:</div>
+                                            <div class="col-md-5 col-sm-5 p-0"> <label for="">12/05/2019</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                            <div class="col-md-5 col-sm-5 p-0"> <label for="">Last Login
+                                                </label></div>
+                                            <div class="col-md-2 col-sm-2">:</div>
+                                            <div class="col-md-5 col-sm-5 p-0"> <label for="">12/05/2019 15.20</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="col-md-3">
+                        <button class="logout ml-auto text-right btnClose "><span>Logout</span><i aria-hidden="true" class="fa fa-sign-out"></i></button>
+                        <!-- <button class="logout ml-auto text-right btnClose "><span>Reset Password</span><i aria-hidden="true" class="fa fa-sign-out"></i></button> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<router-outlet>
+</router-outlet>

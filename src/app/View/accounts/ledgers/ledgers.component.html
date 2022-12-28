@@ -1,0 +1,115 @@
+<div class="pt-5">
+        <div class="container-fluid">
+            <div class="row">
+                    <div class="col-md-12 mb-2">
+                            <div class="bread ">
+                                <div>
+                                    <span><a routerLink="/view/account">Account</a> </span>
+                                    <i class="fa fa-caret-right ml-2" aria-hidden="true"></i>
+                                        Ledger Config
+                                </div>
+                            </div>
+                        </div>
+                <div class="col-md-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-md-12 border-bottom">
+                                        <h6 class="float-left">Asset</h6>
+                                        <i class="fa fa-plus float-right"  routerLink="/view/account/LedgersDetail" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <ul style="color: rgb(23, 145, 145);">
+                                            <tree-root [nodes]="nodes" [options]="options">
+                                                <ng-template #treeNodeTemplate let-node let-index="index">
+                                                    <span>{{ node.data.name }}</span>
+                                                    <i class="fa fa-minus float-right pl-3" aria-hidden="true"></i>
+                                                    <i class="fa fa-plus float-right" aria-hidden="true"></i>                                             
+                                                </ng-template>
+                                            </tree-root>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-md-12 border-bottom">
+                                        <h6 class="float-left">Liability</h6>
+                                        <i class="fa fa-plus float-right" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <ul style="color: rgb(175, 164, 11);">
+                                            <tree-root [nodes]="nodes" [options]="options">
+                                                <ng-template #treeNodeTemplate let-node let-index="index">
+                                                    <span>{{ node.data.name }}</span>
+                                                    <i class="fa fa-minus float-right pl-3" aria-hidden="true"></i>
+                                                    <i class="fa fa-plus float-right" aria-hidden="true"></i>                                             
+                                                </ng-template>
+                                            </tree-root>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-md-12 border-bottom">
+                                        <h6 class="float-left">Income</h6>
+                                        <i class="fa fa-plus float-right" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <ul style="color: rgb(38, 189, 24);">
+                                            <tree-root [nodes]="nodes" [options]="options">
+                                                <ng-template #treeNodeTemplate let-node let-index="index">
+                                                    <span>{{ node.data.name }}</span>
+                                                    <i class="fa fa-minus float-right pl-3" aria-hidden="true"></i>
+                                                    <i class="fa fa-plus float-right" aria-hidden="true"></i>                                             
+                                                </ng-template>
+                                            </tree-root>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-md-12 border-bottom">
+                                        <h6 class="float-left">Expense</h6>
+                                        <i class="fa fa-plus float-right" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <ul style="color: rgb(199, 24, 68);">
+                                            <tree-root [nodes]="nodes" [options]="options">
+                                                <ng-template #treeNodeTemplate let-node let-index="index">
+                                                    <span>{{ node.data.name }}</span>
+                                                    <i class="fa fa-minus float-right pl-3" aria-hidden="true"></i>
+                                                    <i class="fa fa-plus float-right" aria-hidden="true"></i>                                             
+                                                </ng-template>
+                                            </tree-root>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

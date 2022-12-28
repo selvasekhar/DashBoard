@@ -1,0 +1,18 @@
+.sigImg{
+    max-height: 160px !important;
+    width: 100%;
+    height: 100%;
+}
+.btn_logo{
+    background-color: #ffffff !important;
+    border-color: #cacaca !important;
+    position: relative;
+}
+.editImg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: whitesmoke;
+    padding: 2px;
+    z-index: 100;
+}

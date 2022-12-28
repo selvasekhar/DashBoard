@@ -1,0 +1,466 @@
+<div class="container-fluid  pt-5">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="bread ">
+                <div>
+                    <span><a routerLink="/view/purchase">Purchase </a> </span>
+                    <i class="fa fa-caret-right ml-2" aria-hidden="true"></i><a routerLink="/view/account/TaxSearch">
+                        Payment Note </a>
+                    <i class="fa fa-caret-right ml-2" aria-hidden="true"></i><b> Detail</b>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12 mt-1">
+            <div class="card">
+                <div class="card-body">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="">Payment Note Ref No</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="">Branch</label>
+                                    <select class="form-control">
+                                        <option value="">--Select--</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="">Purchase invoice No</label>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control">
+                                        <div class="input-group-append">
+                                            <button class="datebtn" type="button">
+                                                <i class="fa fa-search"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="">Vendor Name</label>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control">
+                                        <div class="input-group-append">
+                                            <button class="datebtn" type="button">
+                                                <i class="fa fa-search"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="">Amount Paid so far</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="">Total Amount ($)</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="">Paid Amount ($)</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="">Tax Amount ($)</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="">Payment Mode</label>
+                                    <select class="form-control">
+                                        <option value="">--Select--</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="">Balance Amount</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="">Invoice Amount To Be Paid</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="">Status</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="">Payment Date</label>
+                                    <div class="input-group">
+                                        <input class="form-control" placeholder="dd-mm-yyyy" (click)="d1.toggle()"
+                                            name="dp" ngbDatepicker #d1="ngbDatepicker">
+                                        <div class="input-group-append">
+                                            <button class="datebtn" (click)="d1.toggle()" type="button">
+                                                <i class="fa fa-calendar"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="">Comment</label>
+                                    <textarea class="form-control"></textarea>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="">Currency</label>
+                                    <select class="form-control">
+                                        <option value="">--Select--</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="">Effective Date</label>
+                                    <div class="input-group">
+                                        <input class="form-control" placeholder="dd-mm-yyyy" (click)="d2.toggle()"
+                                            name="dp" ngbDatepicker #d2="ngbDatepicker">
+                                        <div class="input-group-append">
+                                            <button class="datebtn" (click)="d2.toggle()" type="button">
+                                                <i class="fa fa-calendar"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 px-0 mt-1">
+                <div class="card">
+                    <div class="card-body p-0">
+                        <form>
+                            <div class="container-fluid">
+                                <div class="row verticaltab">
+                                    <div class="col-md-2 readOnly tabmenu pt28 px-0">
+                                        <div class="tab nopadding">
+                                            <ul class="nav nav-tabs">
+                                       
+                                                <li class="nav-item">
+                                                    <a data-toggle="tab" class="nav-link active" href="#Notes">Notes
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a data-toggle="tab" class="nav-link"
+                                                        href="#Attachments">Attachments
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a data-toggle="tab" class="nav-link" href="#Status">Status History
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item">
+                                                        <a data-toggle="tab" class="nav-link" href="#tax">
+                                                           Payment Note
+                                                        </a>
+                                                    </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-10 px-0">
+                                        <div class="wizcontent1">
+                                            <div class="tab-content">
+                                            
+                                                <div id="Notes" class="tab-pane active">
+                                                    <div class="f-narrow ">
+                                                        <div class="col-md-12 pl-1 pr-0 ml-auto mb-1 text-right">
+
+                                                            <div class="btnn-group" role="group"
+                                                                aria-label="Basic example">
+                                                                <button type="button" (click)="open1(content1)"
+                                                                    class="btn">
+                                                                    <i class="fa fa-plus"></i><span>New</span> </button>
+                                                                <button type="button" class="btn">
+                                                                    <i class="fa fa-save"></i><span>Save</span>
+                                                                </button>
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="col-md-12 pl-0  pr-0">
+                                                            <div class="card">
+                                                                <div class="table-responsive">
+                                                                    <table class="table table-sm table-hover">
+                                                                        <thead>
+                                                                            <tr>
+                                                                                <th>Notes</th>
+                                                                                <th>Created By</th>
+                                                                                <th>Created Date</th>
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td>Value</td>
+                                                                                <td>Value</td>
+                                                                                <td>Value</td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div id="Attachments" class="tab-pane">
+                                                    <div class="container-fluid">
+                                                        <div class="row ">
+                                                            <div class="col-md-6 pl-0">
+                                                                <div class="form-group">
+                                                                    <label for="">Select a file</label>
+                                                                    <input type="file" class="form-control-file">
+                                                                </div>
+
+                                                            </div>
+                                                            <div class="col-md-6 pl-1 pr-0 ml-auto mb-1 text-right">
+
+                                                                <div class="btnn-group" role="group"
+                                                                    aria-label="Basic example">
+                                                                    <button type="button" class="btn">
+                                                                        <i class="fa fa-upload"></i><span>Upload</span>
+                                                                    </button>
+                                                                    <button type="button" class="btn">
+                                                                        <i class="fa fa-save"></i><span>Save</span>
+                                                                    </button>
+                                                                </div>
+
+                                                            </div>
+                                                            <div class="col-md-12 pl-0  pr-0">
+                                                                <div class="card">
+                                                                    <div class="table-responsive">
+                                                                        <table class="table table-sm table-hover">
+                                                                            <thead>
+                                                                                <tr>
+                                                                                    <th>File Name</th>
+                                                                                    <th>Uploaded By</th>
+                                                                                    <th>Uploaded Date</th>
+                                                                                </tr>
+                                                                            </thead>
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td>Value</td>
+                                                                                    <td>Value</td>
+                                                                                    <td>Value</td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                                <div id="Status" class="tab-pane">
+                                                    <div class="container-fluid">
+                                                        <div class="row ">
+
+                                                            <div class="col-md-12 pl-0  pr-0">
+                                                                <div class="card">
+                                                                    <div class="table-responsive">
+                                                                        <table class="table table-sm table-hover">
+                                                                            <thead>
+                                                                                <tr>
+                                                                                    <th>Changed By</th>
+                                                                                    <th>Effective Date</th>
+                                                                                    <th>Status</th>
+                                                                                </tr>
+                                                                            </thead>
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td>Value</td>
+                                                                                    <td>Value</td>
+                                                                                    <td>Value</td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div id="tax" class="tab-pane ">
+                                                        <div class="container-fluid">
+                                                            <div class="row">
+                                                                    <div class="col-md-12">                                                                            
+                                                                            <div class="ml-auto text-right">
+                                                                                <div class="btnn-group">
+                                                                                    <button type="button" class="btn" routerLink="/view/purchase/PaymentNoteDetail"><i class="fa fa-file-pdf-o" aria-hidden="true"></i><span>Generate PDF</span> </button>
+                                                                                    <button type="button" class="btn" (click)="openSearchPanel()"><i class="fa fa-envelope-o" aria-hidden="true"></i><span>Send Mail</span> </button>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    <div class="col-md-3">
+                                                                            <div class="form-group">
+                                                                                <label for="">To Mail Id</label>
+                                                                                <select class="form-control">
+                                                                                    <option value="">--Select--</option>
+                                                                                </select>
+                                                                            </div>
+                                                                        </div>
+                                                                    <div class="col-md-3">
+                                                                            <div class="form-group">
+                                                                                <label for="">CC Mail Id</label>
+                                                                            <input type="text" class="form-control">
+                                                                            </div>
+                                                                        </div>
+                                                                    <div class="col-md-3">
+                                                                            <div class="form-group">
+                                                                                <label for="">Sent Mail Count</label>
+                                                                            <input type="text" class="form-control">
+                                                                            </div>
+                                                                        </div>
+                                                                <div class="col-md-12 pl-0  pr-0">
+                                                                    <div class="card">
+                                                                      
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <ng-template #content let-modal>
+        <div class="modal-header">
+            <h4 class="modal-title" id="modal-basic-title">Prefix</h4>
+            <button type="button" class="close" aria-label="Close" (click)="modal.dismiss()">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group ">
+                            <label>Prefix Value</label>
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group ">
+                            <label>Effective Date From</label>
+                            <div class="input-group">
+                                <input class="form-control" placeholder="dd-mm-yyyy" (click)="d5.toggle()" name="dp"
+                                    ngbDatepicker #d5="ngbDatepicker">
+                                <div class="input-group-append">
+                                    <button class="datebtn" (click)="d5.toggle()" type="button">
+                                        <i class="fa fa-calendar"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="">Add Branch Code</label>
+                            <div>
+                                <label class="radio-inline"><input type="radio" name="optradio" checked>Yes</label>
+                                <label class="radio-inline ml-3"><input type="radio" name="optradio">No</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button class="btn">
+                <i class="fa fa-save"></i><span> Save</span>
+            </button>
+            <button class="btn">
+                <i class="fa fa-refresh"></i><span> Refresh</span>
+            </button>
+            <button class="btn">
+                <i class="fa fa-eraser"></i><span> Clear</span>
+            </button>
+        </div>
+    </ng-template>
+    <ng-template #content1 let-modal>
+        <div class="modal-header">
+            <h4 class="modal-title" id="modal-basic-title">Suffix </h4>
+            <button type="button" class="close" aria-label="Close" (click)="modal.dismiss()">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group ">
+                            <label>Suffix Value</label>
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group ">
+                            <label>Effective Date From</label>
+                            <div class="input-group">
+                                <input class="form-control" placeholder="dd-mm-yyyy" (click)="d5.toggle()" name="dp"
+                                    ngbDatepicker #d5="ngbDatepicker">
+                                <div class="input-group-append">
+                                    <button class="datebtn" (click)="d5.toggle()" type="button">
+                                        <i class="fa fa-calendar"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="">Add Branch Code</label>
+                            <div>
+                                <label class="radio-inline"><input type="radio" name="optradio" checked>Yes</label>
+                                <label class="radio-inline ml-3"><input type="radio" name="optradio">No</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button class="btn">
+                <i class="fa fa-save"></i><span> Save</span>
+            </button>
+            <button class="btn">
+                <i class="fa fa-refresh"></i><span> Refresh</span>
+            </button>
+            <button class="btn">
+                <i class="fa fa-eraser"></i><span> Clear</span>
+            </button>
+        </div>
+    </ng-template>
